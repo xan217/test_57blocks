@@ -1,1 +1,49 @@
-<h1> HOME PAGE </h1>
+<div class="centered-template">
+
+  <div class="banner">
+    <h1> YMP - Your Movie Place</h1>
+    <h2>The perfect place to list all your must see movies</h2>
+  </div>
+
+  <div class="movies-categories">
+    <div class="favorite-movies" v-if="favorites">
+      <h3>Favorites Movies</h3>
+      <carousel class="story-carousel story-carousel--colors">
+        <MovieCardExtendedComponent
+          class="story-carousel__slide"
+          v-for="(movie, $index) in favorites" 
+          :key="$index"
+          :movie="movie"
+        >
+        </MovieCardExtendedComponent>
+      </carousel>
+    </div>
+    
+    <div class="trend-movies">
+      <h3>Trend Movies</h3>
+      <carousel class="story-carousel story-carousel--colors">
+        <MovieCardComponent
+          class="story-carousel__slide"
+          v-for="(movie, $index) in trend" 
+          :key="$index"
+          :movie="movie"
+        >
+        </MovieCardComponent>
+      </carousel>
+    </div>
+
+    <div class="country-movies">
+      <h3>Trend Movies in your country</h3>
+      <carousel class="story-carousel story-carousel--colors">
+        <MovieCardComponent
+          class="story-carousel__slide"
+          v-for="(movie, $index) in country" 
+          :key="$index"
+          :movie="movie"
+        >
+        </MovieCardComponent>
+      </carousel>
+    </div>
+  </div>
+
+</div>

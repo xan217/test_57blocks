@@ -1,0 +1,438 @@
+{
+  "page": 1,
+  "results": [
+      {
+          "adult": false,
+          "backdrop_path": "/ge9goiznnnAchCUfsw9XQiR2jNt.jpg",
+          "id": 843794,
+          "title": "JUNG_E",
+          "original_language": "ko",
+          "original_title": "정이",
+          "overview": "On an uninhabitable 22nd-century Earth, the outcome of a civil war hinges on cloning the brain of an elite soldier to create a robot mercenary.",
+          "poster_path": "/z2nfRxZCGFgAnVhb9pZO87TyTX5.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              878,
+              28,
+              12
+          ],
+          "popularity": 141.305,
+          "release_date": "2023-01-20",
+          "video": false,
+          "vote_average": 5.898,
+          "vote_count": 64
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/uJ16DD1dj4CQLPNCWIoiOF3l8np.jpg",
+          "id": 100088,
+          "name": "The Last of Us",
+          "original_language": "en",
+          "original_name": "The Last of Us",
+          "overview": "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.",
+          "poster_path": "/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg",
+          "media_type": "tv",
+          "genre_ids": [
+              18,
+              10765,
+              10759
+          ],
+          "popularity": 5585.639,
+          "first_air_date": "2023-01-15",
+          "vote_average": 8.923,
+          "vote_count": 628,
+          "origin_country": [
+              "US"
+          ]
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/s16H6tpK2utvwDtzZ8Qy4qm5Emw.jpg",
+          "id": 76600,
+          "title": "Avatar: The Way of Water",
+          "original_language": "en",
+          "original_title": "Avatar: The Way of Water",
+          "overview": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+          "poster_path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              878,
+              12,
+              28
+          ],
+          "popularity": 2903.334,
+          "release_date": "2022-12-14",
+          "video": false,
+          "vote_average": 7.714,
+          "vote_count": 4475
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/r9PkFnRUIthgBp2JZZzD380MWZy.jpg",
+          "id": 315162,
+          "title": "Puss in Boots: The Last Wish",
+          "original_language": "en",
+          "original_title": "Puss in Boots: The Last Wish",
+          "overview": "Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.",
+          "poster_path": "/kuf6dutpsT0vSVehic3EZIqkOBt.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              16,
+              28,
+              12,
+              35,
+              10751,
+              14
+          ],
+          "popularity": 8842.129,
+          "release_date": "2022-12-07",
+          "video": false,
+          "vote_average": 8.61,
+          "vote_count": 2338
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/a4I481szRmycyreQTLrRe4f4YJe.jpg",
+          "id": 842544,
+          "title": "Transfusion",
+          "original_language": "en",
+          "original_title": "Transfusion",
+          "overview": "Ryan Logan, a former Special Forces operative, is battling to cope with life after the loss of his wife.  He is thrusted into the criminal underworld to keep his only son from being taken from him.",
+          "poster_path": "/bxh5xCCW9Ynfg6EZJWUkc1zqTnr.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              18,
+              53
+          ],
+          "popularity": 18.785,
+          "release_date": "2023-01-05",
+          "video": false,
+          "vote_average": 6.4,
+          "vote_count": 11
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/5pMy5LF2JAleBNBtuzizfCMWM7k.jpg",
+          "id": 653851,
+          "title": "Devotion",
+          "original_language": "en",
+          "original_title": "Devotion",
+          "overview": "The harrowing true story of two elite US Navy fighter pilots during the Korean War. Their heroic sacrifices would ultimately make them the Navy's most celebrated wingmen.",
+          "poster_path": "/26yQPXymbWeCLKwcmyL8dRjAzth.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              10752,
+              36,
+              18
+          ],
+          "popularity": 2802.532,
+          "release_date": "2022-11-23",
+          "video": false,
+          "vote_average": 6.927,
+          "vote_count": 82
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/mSyQoValhBsJdq3JNGXJww2Q5yL.jpg",
+          "id": 593643,
+          "title": "The Menu",
+          "original_language": "en",
+          "original_title": "The Menu",
+          "overview": "A young couple travels to a remote island to eat at an exclusive restaurant where the chef has prepared a lavish menu, with some shocking surprises.",
+          "poster_path": "/fPtUgMcLIboqlTlPrq0bQpKK8eq.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              35,
+              27,
+              53
+          ],
+          "popularity": 450.692,
+          "release_date": "2022-11-18",
+          "video": false,
+          "vote_average": 7.306,
+          "vote_count": 1788
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/jTCCmhp7UzgHlSC18nRDxQVdsnX.jpg",
+          "id": 214078,
+          "name": "Shahmaran",
+          "original_language": "tr",
+          "original_name": "Şahmaran",
+          "overview": "In this fantasy drama series, a lonely young woman finds her soul mate and discovers they are both part of an ancient legend.",
+          "poster_path": "/rV38JisyIQfqJX0D82vdgbZ9Gw7.jpg",
+          "media_type": "tv",
+          "genre_ids": [
+              18,
+              10765,
+              9648,
+              10759
+          ],
+          "popularity": 53.262,
+          "first_air_date": "2023-01-20",
+          "vote_average": 7.25,
+          "vote_count": 8,
+          "origin_country": [
+              "TR"
+          ]
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/23WUgvjfnQFNwSPSSG9CdGFnauN.jpg",
+          "id": 135959,
+          "name": "That '90s Show",
+          "original_language": "en",
+          "original_name": "That '90s Show",
+          "overview": "Hello, Wisconsin! It's 1995 and Leia Forman, daughter of Eric and Donna, is visiting her grandparents for the summer where she bonds with a new generation of Point Place kids under the watchful eye of Kitty and the stern glare of Red. Sex, drugs and rock 'n roll never dies, it just changes clothes.",
+          "poster_path": "/nZcufEuqZqNYMx6mNjlh2rmjDqx.jpg",
+          "media_type": "tv",
+          "genre_ids": [
+              35
+          ],
+          "popularity": 149.513,
+          "first_air_date": "2023-01-19",
+          "vote_average": 6.861,
+          "vote_count": 36,
+          "origin_country": [
+              "US"
+          ]
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/jJbEKl69hgNdQ9vQISqQGEDx4Lh.jpg",
+          "id": 632065,
+          "title": "House Party",
+          "original_language": "en",
+          "original_title": "House Party",
+          "overview": "Aspiring club promoters and best buds Damon and Kevin are barely keeping things together. Out of money, down on their luck and about to lose the roofs over their heads—and freshly fired from their low-lift jobs as house cleaners—the pair needs a huge windfall to make their problems go away. In a ‘what the hell?’ move, they decide to host the party of the year at an exclusive mansion, the site of their last cleaning job, which just happens to belong to none other than LeBron James. No permission? No problem. What could go wrong?",
+          "poster_path": "/KiyKR9m6h01eIvGObGmpt16U3F.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              35
+          ],
+          "popularity": 240.251,
+          "release_date": "2023-01-12",
+          "video": false,
+          "vote_average": 7.1,
+          "vote_count": 16
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/zxfBtHz5UmSTfIEC4O4GngyjHwa.jpg",
+          "id": 204541,
+          "name": "Three-Body",
+          "original_language": "zh",
+          "original_name": "三体",
+          "overview": "Nanotechnology researcher Wang Miao is taken to the Joint Operations Center by police officer Shi Qiang, who's investigating the mysterious suicide wave among scientists worldwide,  and recruited to sneak into an organization called the Frontiers of Science to help the investigation. When Wang Miao is contacted by the leader of the organization, Shen Yufei, she introduces him to a sophisticated VR video game called Three-Body, but soon he discovers that it's more than just a game.",
+          "poster_path": "/vvKuYw2vmaBbWNgNxEQkuYYpX2l.jpg",
+          "media_type": "tv",
+          "genre_ids": [
+              18,
+              10765
+          ],
+          "popularity": 76.744,
+          "first_air_date": "2023-01-15",
+          "vote_average": 8.152,
+          "vote_count": 33,
+          "origin_country": [
+              "CN"
+          ]
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/5kAGbi9MFAobQTVfK4kWPnIfnP0.jpg",
+          "id": 536554,
+          "title": "M3GAN",
+          "original_language": "en",
+          "original_title": "M3GAN",
+          "overview": "A brilliant toy company roboticist uses artificial intelligence to develop M3GAN, a life-like doll programmed to emotionally bond with her newly orphaned niece. But when the doll's programming works too well, she becomes overprotective of her new friend with terrifying results.",
+          "poster_path": "/7CNCv9uhqdwK7Fv4bR4nmDysnd9.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              878,
+              27,
+              35
+          ],
+          "popularity": 5251.481,
+          "release_date": "2022-12-28",
+          "video": false,
+          "vote_average": 7.06,
+          "vote_count": 381
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/b77HIOMurX86Zt7yuaOApAF58y2.jpg",
+          "id": 203704,
+          "name": "Junji Ito Maniac: Japanese Tales of the Macabre",
+          "original_language": "ja",
+          "original_name": "伊藤潤二『マニアック』",
+          "overview": "From the mind of horror manga maestro Junji Ito comes a spine-tingling selection of some of his most bizarre, disturbing and terrifying tales.",
+          "poster_path": "/gBcXIlZB9nugDhbJGQrQguc65js.jpg",
+          "media_type": "tv",
+          "genre_ids": [
+              16,
+              9648
+          ],
+          "popularity": 165.246,
+          "first_air_date": "2023-01-19",
+          "vote_average": 6.8,
+          "vote_count": 12,
+          "origin_country": [
+              "JP"
+          ]
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/gwRMwljwHoNCyyJVgMA2XC4qPUU.jpg",
+          "id": 615777,
+          "title": "Babylon",
+          "original_language": "en",
+          "original_title": "Babylon",
+          "overview": "A tale of outsized ambition and outrageous excess, tracing the rise and fall of multiple characters in an era of unbridled decadence and depravity during Hollywood's transition from silent films and to sound films in the late 1920s.",
+          "poster_path": "/wjOHjWCUE0YzDiEzKv8AfqHj3ir.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              18,
+              35
+          ],
+          "popularity": 377.232,
+          "release_date": "2022-12-22",
+          "video": false,
+          "vote_average": 7.871,
+          "vote_count": 260
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/fTLMsF3IVLMcpNqIqJRweGvVwtX.jpg",
+          "id": 1035806,
+          "title": "Detective Knight: Independence",
+          "original_language": "en",
+          "original_title": "Detective Knight: Independence",
+          "overview": "Detective James Knight 's last-minute assignment to the Independence Day shift turns into a race to stop an unbalanced ambulance EMT from imperiling the city's festivities. The misguided vigilante, playing cop with a stolen gun and uniform, has a bank vault full of reasons to put on his own fireworks show... one that will strike dangerously close to Knight's home.",
+          "poster_path": "/jrPKVQGjc3YZXm07OYMriIB47HM.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              28,
+              53,
+              80
+          ],
+          "popularity": 80.153,
+          "release_date": "2023-01-20",
+          "video": false,
+          "vote_average": 4.2,
+          "vote_count": 6
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/f9PSbuMeBS5CuHEOVyymg5lcq8J.jpg",
+          "id": 996727,
+          "title": "The Price We Pay",
+          "original_language": "en",
+          "original_title": "The Price We Pay",
+          "overview": "After a pawn shop robbery goes askew, two criminals take refuge at a remote farmhouse to try to let the heat die down, but find something much more menacing.",
+          "poster_path": "/8fwJt0qZieQ7dKaiiqehObWpXYT.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              28,
+              53,
+              9648,
+              80,
+              27
+          ],
+          "popularity": 52.781,
+          "release_date": "2023-01-13",
+          "video": false,
+          "vote_average": 5.1,
+          "vote_count": 7
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
+          "id": 436270,
+          "title": "Black Adam",
+          "original_language": "en",
+          "original_title": "Black Adam",
+          "overview": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+          "poster_path": "/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg",
+          "media_type": "movie",
+          "genre_ids": [
+              14,
+              28,
+              878
+          ],
+          "popularity": 1536.32,
+          "release_date": "2022-10-21",
+          "video": false,
+          "vote_average": 7.209,
+          "vote_count": 3812
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/xr8GKW8M2jSHvUgKsRjRXazn6S1.jpg",
+          "id": 194899,
+          "name": "Represent",
+          "original_language": "fr",
+          "original_name": "En place",
+          "overview": "An idealistic educator is inadvertently thrust into the French presidential race.",
+          "poster_path": "/7QqFilEkKSPiU2QsWShTjSf5wgM.jpg",
+          "media_type": "tv",
+          "genre_ids": [
+              35
+          ],
+          "popularity": 48.92,
+          "first_air_date": "2023-01-20",
+          "vote_average": 6.0,
+          "vote_count": 10,
+          "origin_country": [
+              "FR"
+          ]
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/zsy6D6MXkROv6ESN4i0cz7nCEb5.jpg",
+          "id": 135934,
+          "name": "The Legend of Vox Machina",
+          "original_language": "en",
+          "original_name": "The Legend of Vox Machina",
+          "overview": "They're rowdy, they're ragtag, they're misfits turned mercenaries for hire. Vox Machina is more interested in easy money and cheap ale than actually protecting the realm. But when the kingdom is threatened by evil, this boisterous crew realizes that they are the only ones capable of restoring justice.",
+          "poster_path": "/4fqfhmVNOHe2nLcligiVMtMnfeM.jpg",
+          "media_type": "tv",
+          "genre_ids": [
+              16,
+              10765
+          ],
+          "popularity": 84.19,
+          "first_air_date": "2022-01-27",
+          "vote_average": 8.086,
+          "vote_count": 228,
+          "origin_country": [
+              "US"
+          ]
+      },
+      {
+          "adult": false,
+          "backdrop_path": "/d882Gu6n2x4ev8Lol5AxZIAyx5R.jpg",
+          "id": 69557,
+          "name": "Fauda",
+          "original_language": "he",
+          "original_name": "פאודה",
+          "overview": "A top Israeli agent comes out of retirement to hunt for a Palestinian militant he thought he'd killed, setting a chaotic chain of events into motion.",
+          "poster_path": "/qzWqEhBYah6ObDWu1S9vBPiHEvm.jpg",
+          "media_type": "tv",
+          "genre_ids": [
+              18,
+              10759,
+              10768
+          ],
+          "popularity": 109.092,
+          "first_air_date": "2015-02-15",
+          "vote_average": 7.564,
+          "vote_count": 118,
+          "origin_country": [
+              "IL"
+          ]
+      }
+  ],
+  "total_pages": 1000,
+  "total_results": 20000
+}
