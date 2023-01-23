@@ -6,6 +6,9 @@ export default {
   name: 'MovieCardComponent',
   components: {
   
+  },
+  props: {
+    movie: {}
   }
 }
 </script>

@@ -1,0 +1,10 @@
+.movie-card {
+  width: 200px;
+  height: 300px;
+  aspect-ratio: 2/3;
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center center;
+  margin: 5px;
+  border-radius: 8px;
+}

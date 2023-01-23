@@ -1,0 +1,19 @@
+.movie-card-extended {
+  width: 250px;
+  height: 375px;
+  aspect-ratio: 2/3;
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center center;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: all 0.3s;
+}
+
+.movie-card-extended:hover {
+  box-shadow: 0px 3px 5px rgb(182, 182, 182);
+  transition: all 0.3s;
+  border: 1px solid #f06605;
+}

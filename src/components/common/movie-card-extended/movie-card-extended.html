@@ -1,1 +1,3 @@
-<div> MOVIE CARD EXTENDED COMPONENT </div>
+<div class="movie-card-extended" style="background-image: 'https://api.themoviedb.org/3/movie/{{ movie.id }}{{ movie.poster_path}};'">
+  <h4>{{ movie.title || movie.name }}</h4>
+</div>

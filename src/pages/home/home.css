@@ -67,10 +67,10 @@
   
 }
 .story-carousel--colors .story-carousel__slide:nth-child(n+1) {
-  background: #2e5c8a;
+  /* background: #2e5c8a; */
 }
 .story-carousel--colors .story-carousel__slide:nth-child(2n+1) {
-  background: #336699;
+  /* background: #336699; */
 }
 
 .vs-carousel__arrows {

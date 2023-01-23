@@ -5,7 +5,10 @@
 export default {
   name: 'MovieCardExtended',
   components: {
-  
+
+  },
+  props: {
+    movie: {}
   }
 }
 </script>
