@@ -6,11 +6,14 @@
   </div>
 
   <div class="movies-categories">
-    <div class="favorite-movies" v-if="favorites">
+    <div class="favorite" v-if="favorites">
       <h3>Favorites Movies</h3>
       <swiper
-        :slides-per-view="4"
+        :breakpoints=extended_carousel_breakpoints
         :space-between="50"
+        :navigation="true"
+        :pagintation="{ clickable: true }"
+        :modules="modules"
       >
         <swiper-slide
           v-for="(movie, $index) in favorites" 
@@ -25,10 +28,13 @@
     </div>
     
     <div class="trend-movies">
-      <h3>Trend Movies</h3>
+      <h3>Trend</h3>
       <swiper
-        :slides-per-view="5"
+        :breakpoints=carousel_breakpoints
         :space-between="50"
+        :navigation="true"
+        :pagintation="{ clickable: true }"
+        :modules="modules"
       >
         <swiper-slide
           v-for="(movie, $index) in trend" 
@@ -43,11 +49,14 @@
       </swiper>
     </div>
 
-    <div class="country-movies">
+    <div class="trend-tvshows">
       <h3>Trend Movies in your country</h3>
       <swiper
-        :slides-per-view="5"
+        :breakpoints=carousel_breakpoints
         :space-between="50"
+        :navigation="true"
+        :pagintation="{ clickable: true }"
+        :modules="modules"
       >
         <swiper-slide
           v-for="(movie, $index) in country" 
@@ -60,6 +69,7 @@
         </swiper-slide>
       </swiper>
     </div>
+  
   </div>
 
 </div>
