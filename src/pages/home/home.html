@@ -1,1 +1,75 @@
-<h1> HOME PAGE </h1>
+<div class="centered-template">
+
+  <div class="banner">
+    <h1> YMP - Your Movie Place</h1>
+    <h2>The perfect place to list all your must see movies</h2>
+  </div>
+
+  <div class="movies-categories">
+    <div class="favorites" v-if="favorites">
+      <h3>Favorites Movies</h3>
+      <swiper
+        :breakpoints=extended_carousel_breakpoints
+        :space-between="50"
+        :navigation="true"
+        :pagintation="{ clickable: true }"
+        :modules="modules"
+      >
+        <swiper-slide
+          v-for="(movie, $index) in favorites" 
+          :key="$index"
+        >
+          <MovieCardExtendedComponent
+            :movie="movie"
+          >
+          </MovieCardExtendedComponent>
+        </swiper-slide>
+      </swiper>
+    </div>
+    
+    <div class="trend-movies">
+      <h3>Trend</h3>
+      <swiper
+        :breakpoints=carousel_breakpoints
+        :space-between="50"
+        :navigation="true"
+        :pagintation="{ clickable: true }"
+        :modules="modules"
+      >
+        <swiper-slide
+          v-for="(movie, $index) in trend" 
+          :key="$index"
+        >
+          <MovieCardComponent
+            
+            :movie="movie"
+          >
+          </MovieCardComponent>
+        </swiper-slide>
+      </swiper>
+    </div>
+
+    <div class="trend-tvshows">
+      <h3>Trend Movies in your country</h3>
+      <swiper
+        :breakpoints=carousel_breakpoints
+        :space-between="50"
+        :navigation="true"
+        :pagintation="{ clickable: true }"
+        :modules="modules"
+      >
+        <swiper-slide
+          v-for="(movie, $index) in country" 
+          :key="$index"
+        >
+          <MovieCardComponent
+            :movie="movie"
+          >
+          </MovieCardComponent>
+        </swiper-slide>
+      </swiper>
+    </div>
+  
+  </div>
+
+</div>
