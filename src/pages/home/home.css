@@ -46,31 +46,18 @@
   padding: 20px;
 }
 
-.favorite-movies,
+.favorites,
 .trend-movies,
-.country-movies {
+.trend-tvshows {
   display: block;
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
   border-radius: 8px;
 }
 
-.favorite-movie-list,
-.trend-movie-list,
-.country-movie-list {
-  display: flex;
-  flex-flow: row;
-  overflow-x: auto;
-  max-width: calc(100% - 60px);
-}
-
-.story-carousel .story-carousel__slide {
-  
-}
-.story-carousel--colors .story-carousel__slide:nth-child(n+1) {
-  background: #2e5c8a;
-}
-.story-carousel--colors .story-carousel__slide:nth-child(2n+1) {
-  background: #336699;
+.swiper-button-next, .swiper-rtl .swiper-button-prev,
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  color: white;
+  text-shadow: 0 3px 3px black;
 }
 
 .vs-carousel__arrows {

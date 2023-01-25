@@ -6,44 +6,70 @@
   </div>
 
   <div class="movies-categories">
-    <div class="favorite-movies" v-if="favorites">
+    <div class="favorites" v-if="favorites">
       <h3>Favorites Movies</h3>
-      <carousel class="story-carousel story-carousel--colors">
-        <MovieCardExtendedComponent
-          class="story-carousel__slide"
+      <swiper
+        :breakpoints=extended_carousel_breakpoints
+        :space-between="50"
+        :navigation="true"
+        :pagintation="{ clickable: true }"
+        :modules="modules"
+      >
+        <swiper-slide
           v-for="(movie, $index) in favorites" 
           :key="$index"
-          :movie="movie"
         >
-        </MovieCardExtendedComponent>
-      </carousel>
+          <MovieCardExtendedComponent
+            :movie="movie"
+          >
+          </MovieCardExtendedComponent>
+        </swiper-slide>
+      </swiper>
     </div>
     
     <div class="trend-movies">
-      <h3>Trend Movies</h3>
-      <carousel class="story-carousel story-carousel--colors">
-        <MovieCardComponent
-          class="story-carousel__slide"
+      <h3>Trend</h3>
+      <swiper
+        :breakpoints=carousel_breakpoints
+        :space-between="50"
+        :navigation="true"
+        :pagintation="{ clickable: true }"
+        :modules="modules"
+      >
+        <swiper-slide
           v-for="(movie, $index) in trend" 
           :key="$index"
-          :movie="movie"
         >
-        </MovieCardComponent>
-      </carousel>
+          <MovieCardComponent
+            
+            :movie="movie"
+          >
+          </MovieCardComponent>
+        </swiper-slide>
+      </swiper>
     </div>
 
-    <div class="country-movies">
+    <div class="trend-tvshows">
       <h3>Trend Movies in your country</h3>
-      <carousel class="story-carousel story-carousel--colors">
-        <MovieCardComponent
-          class="story-carousel__slide"
+      <swiper
+        :breakpoints=carousel_breakpoints
+        :space-between="50"
+        :navigation="true"
+        :pagintation="{ clickable: true }"
+        :modules="modules"
+      >
+        <swiper-slide
           v-for="(movie, $index) in country" 
           :key="$index"
-          :movie="movie"
         >
-        </MovieCardComponent>
-      </carousel>
+          <MovieCardComponent
+            :movie="movie"
+          >
+          </MovieCardComponent>
+        </swiper-slide>
+      </swiper>
     </div>
+  
   </div>
 
 </div>
