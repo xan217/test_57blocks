@@ -6,6 +6,8 @@ import MovieCardComponent from '@/components/common/movie-card/movie-card.vue';
 import MovieCardExtendedComponent from '@/components/common/movie-card-extended/movie-card-extended.vue';
 import * as Data from '@/assets/mockData.json';
 
+import { MoviesServices } from '@/services/movies.service';
+
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from "swiper";
 import "swiper/css/pagination";
@@ -22,9 +24,9 @@ export default {
   },
   data: () => ({
     favorites: null,
-    trend: null,
-    country: null,
-    extended_carousel_breakpoints: {
+    moviesTrend: null,
+    tvTrend: null,
+    extendedCarouselBreakpoints: {
       '320': {
         slidesPerView: 1.1,
         spaceBetween: 20
@@ -42,7 +44,7 @@ export default {
         spaceBetween: 50
       }
     },
-    carousel_breakpoints: {
+    carouselBreakpoints: {
       '320': {
         slidesPerView: 1.5,
         spaceBetween: 20
@@ -71,10 +73,15 @@ export default {
     };
   },
   mounted() {
-    this.favorites = Data.results;
-    this.trend = Data.results;
-    this.country = Data.results;
-  }
+    MoviesServices.getTrendingMovies().then( movies => {
+      this.moviesTrend = movies
+    });
 
+    MoviesServices.getTrendingTV().then( shows => {
+      this.tvTrend = shows
+    });
+
+    this.favorites = Data.results;
+  }
 }
 </script>
