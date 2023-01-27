@@ -1,1 +1,23 @@
-<div> NAVBAR </div>
+<div class="navbar-container">
+  <div class="navbar_left-side">
+    <div class="navbar_page-name">
+      YMP
+    </div>
+    <div class="navbar_menu">
+      <div class="navbar_menu_item">Home</div>
+      <div class="navbar_menu_item">Personal Favorites</div>
+    </div>
+  </div>
+  <div class="navbar_right-side">
+    <div class="navbar_right-side_profile-container">
+      <div class="navbar_right-side_profile_photo-container" @click="toggleMenu()">
+        <img src="../../..//assets/OIP.jpeg" alt="" class="navbar_right-side_profile_photo">
+      </div>
+    </div>
+    <div class="navbar_right-side_logout-menu" v-if="showMenu">
+      <div class="navbar_right-side_logout-menu_item">
+        Logout
+      </div>
+    </div>
+  </div>
+</div>

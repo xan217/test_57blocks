@@ -7,6 +7,8 @@ import HomePage         from './pages/home/home.vue';
 import LoginPage        from './pages/login/login.vue';
 import MovieDetailsPage from './pages/movie-details/movie-details.vue';
 
+import NavbarComponent  from './components/templates/navbar/navbar.vue';
+
 export default {
   name: 'App',
   components: {
@@ -14,6 +16,7 @@ export default {
     HomePage,
     LoginPage,
     MovieDetailsPage,
+    NavbarComponent
   }
 }
 </script>
