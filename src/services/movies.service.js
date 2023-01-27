@@ -2,7 +2,7 @@ import { Request } from './http.service';
 
 /**
  * getTrendingMovies
- * 
+ * Retrieve the trending Movies for the day
  *    
  * @returns object
  */
@@ -15,14 +15,14 @@ async function getTrendingMovies ( ) {
     }
     return {};
   } catch (err) {
-    console.error(`Error en al obtener la lista de tendencias de Películas: ${err.message}`);
-    return false;
+    console.error(`Error en al obtener la lista de tendencias de Películas: ${ err.message }`);
+    return {};
   }
 }
 
 /**
  * getTrendingTV
- * 
+ * Retreive the trending TV shows for the day
  *    
  * @returns object
  */
@@ -35,8 +35,8 @@ async function getTrendingTV ( ) {
     }
     return {};
   } catch (err) {
-    console.error(`Error en al obtener la lista de tendencias de Series: ${err.message}`);
-    return false;
+    console.error(`Error en al obtener la lista de tendencias de Series: ${ err.message }`);
+    return {};
   }
 }
 
@@ -58,8 +58,8 @@ async function getMovieDetails ( id = null ) {
     }
     return {};
   } catch (err) {
-    console.error(`Error en al obtener los detalles de la Película ${ id }: ${err.message}`);
-    return false;
+    console.error(`Error en al obtener los detalles de la Película ${ id }: ${ err.message }`);
+    return {};
   }
 }
 
