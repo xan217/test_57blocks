@@ -8,6 +8,7 @@ import LoginPage        from './pages/login/login.vue';
 import MovieDetailsPage from './pages/movie-details/movie-details.vue';
 
 import FooterComponent  from './components/templates/footer/footer.vue';
+import NavbarComponent  from './components/templates/navbar/navbar.vue';
 
 export default {
   name: 'App',
@@ -16,7 +17,8 @@ export default {
     HomePage,
     LoginPage,
     MovieDetailsPage,
-    FooterComponent
+    FooterComponent,
+    NavbarComponent,
   }
 }
 </script>
