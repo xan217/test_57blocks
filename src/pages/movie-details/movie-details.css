@@ -1,12 +1,11 @@
 .movie-details_container {
   display: flex;
   flex-flow: column;
-  width: 100%;
 
 }
 
 .movie-details_general-information_container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -88,7 +87,7 @@
 .movie-details_cast-crew {
   display: flex;
   flex-flow: column;
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -108,4 +107,17 @@
 .movie-details_cast-crew_crew {
   display: flex;
   flex-flow: row;
+}
+
+.movie-details_back { 
+  width: 100%;
+  text-align: left;
+}
+
+.movie-details_back_button {
+  background-color: transparent;
+  margin: 3px 5px 15px 10px;
+  align-self: flex-start;
+  border: 0px;
+  cursor: pointer;
 }

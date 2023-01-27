@@ -24,6 +24,11 @@ export default {
     this.title = this.movie.title || this.movie.name;
     this.type_show = this.movie.media_type === 'tv';
     this.year = (this.movie.release_date || this.movie.first_air_date).substr(0, 4);
+  },
+  methods: {
+    openMovie() {
+      this.$router.push({name: 'details', params: { movieId: this.movie.id }});
+    }
   }
 }
 </script>

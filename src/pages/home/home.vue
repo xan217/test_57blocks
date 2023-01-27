@@ -73,6 +73,10 @@ export default {
     };
   },
   mounted() {
+    if(!localStorage.getItem('userInfo')) {
+      this.$router.replace('/login');
+    }
+
     MoviesServices.getTrendingMovies().then( movies => {
       this.moviesTrend = movies
     });

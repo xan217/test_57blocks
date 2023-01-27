@@ -3,10 +3,10 @@
     <div class="footer_left-side">
       <div class="footer_left-side_page-nav_container">
         <h4>YMP - Your Movie Place</h4>
-        <div class="footer_left-side_page-nav">
-          <a href="#">Home</a>
-          <a href="#">Favorites</a>
-          <a href="#">Logout</a>
+        <div class="footer_left-side_page-nav" v-if="authenticated">
+          <router-link to="/home">Home</router-link>
+          <router-link to="/favorites">Personal Favorites</router-link>
+          <router-link to="/login">Logout</router-link>
         </div>
       </div>
     </div>
