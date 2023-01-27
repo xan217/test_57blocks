@@ -11,14 +11,16 @@
         <form class="login_box_form">
           <div class="login_box_form_field">
             <label for="username">Username</label>
-            <input type="text" name="username">
+            <input type="text" name="username" v-model="username" required>
           </div>
           <div class="login_box_form_field">
             <label for="password">Password</label>
-            <input type="password" name="password">
+            <input type="password" name="password" v-model="password" required>
           </div>
           <div class="login_box_form_field">
-            <button type="submit">Enter to the awesome place</button>
+            <button @click="saveInfo()">
+              Enter to the awesome place
+            </button>
           </div>
         </form>
       </div>

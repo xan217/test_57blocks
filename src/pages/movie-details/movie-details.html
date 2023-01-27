@@ -4,6 +4,9 @@
     </div>
     <div class="movie-details_general-information">
       <div class="movie-details_poster">
+        <div class="movie-details_back">
+          <button class="movie-details_back_button" @click="goBack()">&lt; go back</button>
+        </div>
         <img :src="movie.poster" alt="">
       </div>
       <div class="movie-details_information">

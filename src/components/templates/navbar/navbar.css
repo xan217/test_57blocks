@@ -1,5 +1,4 @@
 .navbar-container {
-  position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -51,6 +50,8 @@
 }
 
 .navbar_menu_item {
+  color: white;
+  text-decoration: none;
   cursor: pointer;
   width: auto;
   line-height: 34px;
@@ -66,6 +67,8 @@
   border-radius: 8px;
 }
 
+
+
 .navbar_right-side_logout-menu {
   position: absolute;
   width: 120px;
@@ -77,13 +80,18 @@
   box-shadow: 0px 3px 3px #8080805c;
 }
 
-.navbar_right-side_logout-menu_item {
+.navbar_right-side_logout-menu_item div {
+  text-decoration: none;
   cursor: pointer;
   line-height: 24px;
   border-radius: 4px;
   transition: all 0.2s ease;
+  text-decoration: none;
+  color: black;
+  padding: 6px 36px;
 }
 
-.navbar_right-side_logout-menu_item:hover {
-  background-color: rgb(223, 242, 255);
+.navbar_right-side_logout-menu_item div:hover {
+  background-color: #002f60;
+  color: white;
 }

@@ -37,14 +37,6 @@
   margin: 0px;
 }
 
-.login_box_form_container {
-
-}
-
-.login_box_form {
-
-}
-
 .login_box_form_field {
   display: flex;
   flex-flow: column;
@@ -67,12 +59,13 @@
 
 .login_box_form_field input:focus {
   border: 0px;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid #f06605;
   transition: all 0.2s ease;
   outline: none;
 }
 
 .login_box_form_field button {
+  text-decoration: none;
   border: 0px;
   border-radius: 8px;
   font-size: 16px;
@@ -85,7 +78,7 @@
 }
 
 .login_box_form_field button:hover {
-  background-color: #60aee5;
-  color: black;
+  background-color: #002f60;
+  color: white;
   transition: all 0.2s ease;
 }
