@@ -28,6 +28,9 @@ export const Request = async ( method, endpoint = '', data = {}, type = null) =>
     }
     if(method !== 'GET' && method !== 'HEAD'){
       options['body'] = JSON.stringify(data)
+    } 
+    else {
+      Object.entries( (key, value) => { endpoint += `&${ key }=${ value }` });
     }
   
     const response = await fetch(API + endpoint, options);

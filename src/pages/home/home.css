@@ -1,4 +1,21 @@
+.home_container {
+  width: 100%;
+  background-color: black;
+  position: absolute;
+}
+
+.home_container_backdrop {
+  background: url(../../assets/R.jpeg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
 .centered-template {
+  position: relative;
   background-color: rgb(255, 255, 255);
   color: rgb(32, 32, 32);
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
@@ -6,6 +23,8 @@
   border-right: 1px solid lightgray;
   border-left: 1px solid lightgray;
 }
+
+
 
 .banner {
   background: url('https://img.freepik.com/premium-photo/movie-theater-during-screening-animated-movie_136930-1144.jpg');
