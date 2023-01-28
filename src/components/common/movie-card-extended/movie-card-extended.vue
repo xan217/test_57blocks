@@ -29,7 +29,6 @@ export default {
   },
   methods: {
     openMovie() {
-      console.log(this.movie);
       this.$router.push({name: 'details', params: { movieId: this.movie.id, mediaType: this.movie.media_type }});
     }
   }

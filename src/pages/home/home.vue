@@ -26,6 +26,10 @@ export default {
     favorites: null,
     moviesTrend: null,
     tvTrend: null,
+    moviesPage: 1,
+    showsPage: 1,
+    favoriteMovies: [],
+    favoriteTVshows: [],
     extendedCarouselBreakpoints: {
       '320': {
         slidesPerView: 1.1,
@@ -85,14 +89,38 @@ export default {
     this.favorites = [...favoriteMovies, ...favoriteTVshows];
 
     if( moviesTrend.length ) {
-      favoriteMovies = favoriteMovies.map(film => film.id);
+      this.favoriteMovies = favoriteMovies.map(film => film.id);
       this.moviesTrend = moviesTrend.map(film => ({...film, isFavorite: !!favoriteMovies.find(id => film.id === id)}) );
     }
 
     if( tvTrend.length ) {
-      favoriteTVshows = favoriteTVshows.map(film => film.id);
+      this.favoriteTVshows = favoriteTVshows.map(film => film.id);
       this.tvTrend = tvTrend.map(film => ({...film, isFavorite: !!favoriteTVshows.find(id => film.id === id)}) );
     } 
+  },
+  methods: {
+    async validateIndexPositionMovies( swiper ) {
+      const actualPosition = this.carouselBreakpoints[Number(swiper.currentBreakpoint)].slidesPerView + swiper.activeIndex;
+      if(actualPosition >= this.moviesTrend.length - 5 ) {
+        let moviesTrend = await MoviesServices.getTrendingMovies(++this.moviesPage);
+        
+        this.moviesTrend = [
+          ...this.moviesTrend,  
+          ...moviesTrend.map(film => ({...film, isFavorite: !!this.favoriteMovies.find(id => film.id === id)}) )
+        ];
+      }
+    },
+    async validateIndexPositionTVshows( swiper ) {
+      const actualPosition = this.carouselBreakpoints[Number(swiper.currentBreakpoint)].slidesPerView + swiper.activeIndex;
+      if(actualPosition >= this.tvTrend.length - 5 ) {
+        let tvTrend = await MoviesServices.getTrendingMovies(++this.moviesPage);
+        
+        this.tvTrend = [
+          ...this.tvTrend,  
+          ...tvTrend.map(film => ({...film, isFavorite: !!this.favoriteTVshows.find(id => film.id === id)}) )
+        ];
+      }
+    },
   }
 }
 </script>
