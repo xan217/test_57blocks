@@ -1,0 +1,7 @@
+.favorites_section_cards {
+  display: flex;
+  flex-flow: row;
+  column-gap: 10px;
+  flex-flow: wrap;
+  justify-content: space-around;
+}

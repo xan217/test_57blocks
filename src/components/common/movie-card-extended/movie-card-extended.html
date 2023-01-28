@@ -1,0 +1,33 @@
+<div class="movie-card-extended_container">
+  <div 
+    class="movie-card-extended"
+    :style="{backgroundImage: poster}"
+    @mouseover="showDetails = true"
+    @mouseleave="showDetails = false"
+  >    
+    <div class="show" v-if="!!type_show"></div>
+    <div class="movie" v-else></div>
+    <transition name="fade" mode="out-in">
+      <div 
+        class="movie-card-extended_overview"
+        v-if="showDetails"
+      >
+        <p>{{ overview }}</p>
+        <button @click="openMovie()" class="movie-card-extended_more">See more details</button>
+      </div>
+    </transition>
+  </div>
+
+  <div class="movie-card-extended_header">
+    <div class="rating">
+      <div class="rating-down"><i class="fa-solid fa-thumbs-down"></i></div>
+      <div>
+        <div class="rating-size" v-bind:aria-valuenow="rating" aria-valuemin="0" aria-valuemax="100" :style="{width: rating+'%'}"></div>
+      </div>
+      <div class="rating-up"><i class="fa-solid fa-thumbs-up"></i></div>
+    </div>
+  </div>
+    <div class="movie-card-extended_title">
+      <h4>{{ title }} ({{ year }})</h4>
+    </div>
+</div>

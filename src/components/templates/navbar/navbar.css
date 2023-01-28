@@ -1,0 +1,97 @@
+.navbar-container {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  background-color: #0578c3;
+  box-shadow: 0px 3px 4px rgba(56, 56, 56, 0.226);
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.navbar_left-side,
+.navbar_right-side {
+  display: flex;
+  flex-flow: row;
+  column-gap: 20px;
+  padding: 5px;
+}
+
+.navbar_left-side {
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+.navbar_right-side {
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.navbar_page-name {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar_menu {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin-left: 40px;
+  color: white;
+}
+
+.navbar_right-side_profile_photo {
+  width: 30px;
+  border-radius: 100%;
+  box-shadow: 0px 3px 3px grey;
+  cursor: pointer;
+}
+
+.navbar_menu_item {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  width: auto;
+  line-height: 34px;
+  padding: 0px 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.navbar_menu_item:hover {
+  background-color: #002f60;
+  color: white;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+
+
+.navbar_right-side_logout-menu {
+  position: absolute;
+  width: 120px;
+  padding: 10px;
+  top: 50px;
+  right: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 3px 3px #8080805c;
+}
+
+.navbar_right-side_logout-menu_item div {
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 24px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: black;
+  padding: 6px 36px;
+}
+
+.navbar_right-side_logout-menu_item div:hover {
+  background-color: #002f60;
+  color: white;
+}

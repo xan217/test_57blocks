@@ -1,0 +1,33 @@
+.footer-container {
+  width: 100%;
+  background-color: #032251;
+  color: white;
+  position: relative;
+  box-shadow: 0px -3px 5px #0000005c;
+  border-top: 2px solid #f06605;
+}
+
+.footer { 
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_left-side,
+.footer_right-side {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+.footer_left-side_page-nav {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.footer_left-side_page-nav a {
+  color: white;
+  text-decoration: none;
+}

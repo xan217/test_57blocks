@@ -1,0 +1,28 @@
+.person-card_container {
+  width: 100px;
+  height: 200px;
+  aspect-ratio: 2/3;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 5px lightgray;
+}
+
+.person-card {
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  border-radius: 8px;
+}
+
+.person-card_name {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #00000061;
+  color: white;
+}

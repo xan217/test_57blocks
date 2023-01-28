@@ -1,0 +1,106 @@
+<div class="movie-details_container centered-template">
+  <div class="movie-details_general-information_container">
+    <div class="movie-details_general-information_backdrop" :style="{backgroundImage: movie.backdrop}">
+    </div>
+    <div class="movie-details_general-information">
+      <div class="movie-details_poster">
+        <div class="movie-details_back">
+          <button class="movie-details_back_button" @click="goBack()">&lt; back</button>
+        </div>
+        <img :src="movie.poster" alt="">
+      </div>
+      <div class="movie-details_information">
+        <div class="movie-details_title-block">
+          <span class="movie-details_title">{{ movie.title }}</span>({{ movie.year }})
+        </div>
+        <div class="movie-details_characteristics">
+          <div class="movie-details_characteristics_release-date">
+            {{ movie.release_date }}
+          </div>
+          <div class="movie-details_characteristics_genres">
+            {{ movie.genres }}
+          </div>
+          <div class="movie-details_characteristics_duration">
+            {{ movie.duration }}
+          </div>
+        </div>
+        <div class="movie-details_rating">
+          <div class="movie-details_rating_average">
+            {{ movie.rating }}%
+            <i class="fa-solid fa-thumbs-up"></i>
+          </div>
+          <div class="movie-details_user-like">
+            <!-- <div
+              @click="setFavorite()"
+              class="movie-details_user-like_favorite"
+              :class="movie.isFavorite ? 'selected' : ''">
+              <i class="fa-solid fa-star"></i>
+            </div> -->
+          </div>
+        </div>
+        <div class="movie-details_tagline">
+          {{ movie.tagline }}
+        </div>
+        <div class="movie-details_overview">
+          <h4>Overview</h4>
+          <p>{{ movie.overview }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  
+  <div class="movie-details_cast-crew">
+    <div class="movie-details_cast-crew_cast-block">
+      <div class="movie-details_cast-crew_cast-title">
+        <h4>Cast</h4>
+      </div>
+      <div class="movie-details_cast-crew_cast">
+        <swiper
+          :breakpoints=carouselBreakpoints
+          :space-between="50"
+          :navigation="true"
+          :pagintation="{ clickable: true }"
+          :modules="modules"
+          @realIndexChange="validateIndexPositionCast"
+        >
+          <swiper-slide
+            v-for="(item, $index) in castVisibleSlides"
+            :key="$index"
+          >
+            <PersonCardComponent 
+              :person="item"
+            >
+            </PersonCardComponent>
+          </swiper-slide>
+        </swiper>
+      </div>
+    </div>
+    <div class="movie-details_cast-crew_crew-block">
+      <div class="movie-details_cast-crew_crew-title">
+        <h4>Crew</h4>
+      </div>
+      <div class="movie-details_cast-crew_crew">
+        <swiper
+          :breakpoints=carouselBreakpoints
+          :space-between="50"
+          :navigation="true"
+          :pagintation="{ clickable: true }"
+          :modules="modules"
+          @realIndexChange="validateIndexPositionCrew"
+        >
+          <swiper-slide
+            v-for="(item, $index) in crewVisibleSlides"
+            :key="$index"
+          >
+            <PersonCardComponent 
+              :person="item"
+            >
+            </PersonCardComponent>
+          </swiper-slide>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</div>
