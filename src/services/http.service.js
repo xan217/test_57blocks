@@ -18,7 +18,8 @@ export const Request = async ( method, endpoint = '', data = {}, type = null) =>
 
     const API = 'https://api.themoviedb.org/3/';
     const api_key = '8f809a5ff3cb44477fdf4548a69bce9d';
-    endpoint += '?api_key='+api_key;
+    endpoint += endpoint.indexOf('?') > -1 ? '&' : '?';
+    endpoint += 'api_key='+api_key;
 
     let options = {
       method,
@@ -30,7 +31,9 @@ export const Request = async ( method, endpoint = '', data = {}, type = null) =>
       options['body'] = JSON.stringify(data)
     } 
     else {
-      Object.entries( (key, value) => { endpoint += `&${ key }=${ value }` });
+      for (const [key, value] of Object.entries(data)) {
+        endpoint += `&${ key }=${ value }`;
+      }
     }
   
     const response = await fetch(API + endpoint, options);

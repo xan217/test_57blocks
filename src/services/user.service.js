@@ -11,11 +11,11 @@ let accountID = '';
  * @returns bool
  */
 async function authenticate ( ) {
-  if( !id ) return {};
   try {
     let response = await Request('GET', `authentication/token/new`);  
-    if( response.status === 200 && response.data.success ){  
-      requestToken = response.data.request_token;
+    if( response.status === 200 ){  
+      response = await response.json();
+      requestToken = response.request_token;
       return true;
     }
     return false;
@@ -25,6 +25,16 @@ async function authenticate ( ) {
   }
 }
 
+async function authorizeToken ( ) {
+  try {
+    await window.open(`https://www.themoviedb.org/authenticate/${requestToken}?redirect_to=http://localhost:8080/approved`);
+  } catch (err) {
+    console.error(`Error al autenticar al autorizar el token: ${ err.message }`);
+  }
+}
+
+
+
 /**
  * createSession
  * Creates a session for the user (xan217 in this case) for temporary (24h) storage
@@ -32,7 +42,6 @@ async function authenticate ( ) {
  * @returns bool
  */
 async function createSession ( ) {
-  if( !id ) return {};
   try {
     let response = await Request(
       'POST', 
@@ -40,8 +49,9 @@ async function createSession ( ) {
       {
         request_token: requestToken
       });  
-    if( response.status === 200 && response.data.success ){  
-      sessionID = response.data.session_id;
+    if( response.status === 200 ){  
+      response = await response.json();
+      sessionID = response.session_id;
       return true;
     }
     return false;
@@ -58,11 +68,11 @@ async function createSession ( ) {
  * @returns bool
  */
 async function createGuestSession ( ) {
-  if( !id ) return {};
   try {
-    let response = await Request('POST', `authentication/guest_session/new`);
-    if( response.status === 200 && response.data.success ){  
-      sessionID = response.data.session_id;
+    let response = await Request('GET', `authentication/guest_session/new`);
+    if( response.status === 200 ){  
+      response = await response.json();
+      sessionID = response.guest_session_id;
       return true;
     }
     return false;
@@ -80,16 +90,16 @@ async function createGuestSession ( ) {
  * @returns bool
  */
 async function getAccount ( ) {
-  if( !id ) return {};
   try {
     let response = await Request(
-      'POST',
-      `authentication/session/new`,
+      'GET',
+      `account`,
       {
-        request_token: requestToken
-      });  
-    if( response.status === 200 && response.data.success ){  
-      accountID = response.data.account_id;
+        session_id: sessionID || localStorage.getItem('sessionID')
+      });
+    if( response.status === 200 ){
+      response = await response.json();
+      accountID = response.id;
       return true;
     }
     return false;
@@ -110,19 +120,21 @@ async function getAccount ( ) {
  * @returns bool
  */
 async function setFavorite ( mediaType, mediaID, favorite ) {
-  if( !id ) return {};
+  console.log(mediaType, mediaID, favorite);
+  if( !mediaType || !mediaID ) return false;
   try {
     let response = await Request(
       'POST',
-      `account/${ accountID }/favorite`,
+      `account/${ accountID || localStorage.getItem('accountID') }/favorite?session_id=${ sessionID || localStorage.getItem('sessionID') }`,
       {
         media_type: mediaType,
         media_id: mediaID,
         favorite
-      });  
-    return response.status === 201;
+      });
+    response = await response.json();
+    return response.success;
   } catch (err) {
-    console.error(`Error al setear el estado de favorito para el film ${ id }: ${ err.message }`);
+    console.error(`Error al setear el estado de favorito para el film ${ mediaID }: ${ err.message }`);
     return false;
   }
 }
@@ -134,17 +146,17 @@ async function setFavorite ( mediaType, mediaID, favorite ) {
  * @returns {array} movies list
  */
 async function getFavoriteMovies ( ) {
-  if( !id ) return {};
   try {
     let response = await Request(
-      'POST',
-      `account/${ accountID }/favorite/movie`,
+      'GET',
+      `account/${ accountID || localStorage.getItem('accountID') }/favorite/movies`,
       {
-        session_id: sessionID,
+        session_id: sessionID || localStorage.getItem('sessionID'),
         sort_by: "created_at.asc"
       });  
     if(response.status === 200) {
-      return response.data.results;
+      response = await response.json();
+      return response.results;
     }
     return [];
   } catch (err) {
@@ -160,17 +172,17 @@ async function getFavoriteMovies ( ) {
  * @returns {array} tv shows list
  */
 async function getFavoriteTV ( ) {
-  if( !id ) return {};
   try {
     let response = await Request(
-      'POST',
-      `account/${ accountID }/favorite/tv`,
+      'GET',
+      `account/${ accountID || localStorage.getItem('accountID') }/favorite/tv`,
       {
-        session_id: sessionID,
+        session_id: sessionID || localStorage.getItem('sessionID'),
         sort_by: "created_at.asc"
       });  
     if(response.status === 200) {
-      return response.data.results;
+      response = await response.json();
+      return response.results;
     }
     return [];
   } catch (err) {
@@ -179,12 +191,28 @@ async function getFavoriteTV ( ) {
   }
 }
 
+async function setUser( requestTokenParam ) {
+
+  requestToken = requestTokenParam;
+
+  await createSession();
+  await getAccount();
+
+  localStorage.setItem('requestToken', requestToken);
+  localStorage.setItem('sessionID', sessionID);
+  localStorage.setItem('accountID', accountID);
+
+  return !!requestToken && !!sessionID && !!accountID;
+}
+
 export const UserServices = {
   authenticate,
+  authorizeToken,
   createSession,
   createGuestSession,
   getAccount,
   setFavorite,
   getFavoriteMovies,
-  getFavoriteTV
+  getFavoriteTV,
+  setUser
 }

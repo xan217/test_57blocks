@@ -2,6 +2,8 @@
 <template src="./login.html"></template>
 
 <script>
+import { UserServices } from '@/services/user.service';
+
 export default {
   name: 'LoginPage',
   components: {
@@ -17,10 +19,11 @@ export default {
     }
   },
   methods: {
-    saveInfo() { 
+    async saveInfo() { 
       if(this.username.length && this.password.length) {
         localStorage.setItem('userInfo', `{username:${this.username},password:${btoa(this.password)}}`);
-      this.$router.push('/home');
+        if( await UserServices.authenticate() )
+          await UserServices.authorizeToken();
       }
     }
   }

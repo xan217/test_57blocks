@@ -92,6 +92,7 @@ h4, h5 {
   grid-template-columns: 15px auto 15px;
   margin: 5px;
   align-items: center;
+  margin: 0px 10%;
 }
 
 .rating-down {

@@ -5,7 +5,7 @@
     <div class="movie-details_general-information">
       <div class="movie-details_poster">
         <div class="movie-details_back">
-          <button class="movie-details_back_button" @click="goBack()">&lt; go back</button>
+          <button class="movie-details_back_button" @click="goBack()">&lt; back</button>
         </div>
         <img :src="movie.poster" alt="">
       </div>
@@ -26,10 +26,16 @@
         </div>
         <div class="movie-details_rating">
           <div class="movie-details_rating_average">
-            {{ movie.rating }}
+            {{ movie.rating }}%
+            <i class="fa-solid fa-thumbs-up"></i>
           </div>
           <div class="movie-details_user-like">
-            <button> star for user like</button>
+            <!-- <div
+              @click="setFavorite()"
+              class="movie-details_user-like_favorite"
+              :class="movie.isFavorite ? 'selected' : ''">
+              <i class="fa-solid fa-star"></i>
+            </div> -->
           </div>
         </div>
         <div class="movie-details_tagline">

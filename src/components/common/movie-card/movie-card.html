@@ -4,27 +4,36 @@
     :style="{backgroundImage: poster}"
     @mouseover="showDetails = true"
     @mouseleave="showDetails = false"
-  >    
-    <div class="show" v-if="!!type_show"></div>
-    <div class="movie" v-else></div>
+  >
+    <div
+      @click="addFavorite()"
+      class="movie-card_favorite"
+      :class="isFavorite ? 'selected' : ''">
+      <i class="fa-solid fa-star"></i>
+    </div>
     <transition name="fade" mode="out-in">
       <div 
         class="movie-card_overview"
         v-if="showDetails"
       >
         <p>{{ overview }}</p>
-        <button @click="openMovie()" class="movie-card_more">See more details</button>
+        <button
+          @click="openMovie()"
+          class="movie-card_more"
+        >
+          See more details
+        </button>
       </div>
     </transition>
   </div>
 
   <div class="movie-card_header">
-    <div class="rating">
-      <div class="rating-down"><i class="fa-solid fa-thumbs-down"></i></div>
-      <div>
-        <div class="rating-size" v-bind:aria-valuenow="rating" aria-valuemin="0" aria-valuemax="100" :style="{width: rating+'%'}"></div>
-      </div>
-      <div class="rating-up"><i class="fa-solid fa-thumbs-up"></i></div>
+    <div class="rating-std">
+        <div class="rating-star">
+          {{rating}}%
+          <i class="fa-solid fa-thumb-up">
+          </i>
+        </div>
     </div>
   </div>
     <div class="movie-card_title">
