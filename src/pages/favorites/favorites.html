@@ -1,1 +1,43 @@
-<h1> FAVORITES PAGE </h1>
+<div class="favorites-container">
+  <div class="favorites centered-template">
+    <div class="favorites_title">
+      <h1>
+        Here are your saved favorites
+      </h1>
+    </div>
+    <div class="favorites_section">
+      <div class="favorites_section_title">
+        <h3>Favorite movies</h3>
+      </div>
+      <div class="favorites_section_cards" v-if="favoriteMovies.length > 0">
+        <MovieCardExtendedComponent
+          v-for="(movie, $index) in favoriteMovies"
+          :index="$index"
+          :movie="movie"
+        >
+        </MovieCardExtendedComponent>
+      </div>
+      <div class="favorites_section_no-data" v-else>
+        <i class="fa-light fa-face-sad-tear"></i>
+        <span>There is no favorites movies</span>
+      </div>
+    </div>
+    <div class="favorites_section">
+      <div class="favorites_section_title">
+        <h3>Favorite TV shows</h3>
+      </div>
+      <div class="favorites_section_cards" v-if="favoriteTVshows.length > 0">
+        <MovieCardExtendedComponent
+          v-for="(show, $index) in favoriteTVshows"
+          :index="$index"
+          :movie="show"
+        >
+        </MovieCardExtendedComponent>
+      </div>
+      <div class="favorites_section_no-data" v-else>
+        <i class="fa-light fa-face-sad-tear"></i>
+        <span>There is no favorites TV shows</span>
+      </div>
+    </div>
+  </div>
+</div>

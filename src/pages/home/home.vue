@@ -4,9 +4,9 @@
 <script>
 import MovieCardComponent from '@/components/common/movie-card/movie-card.vue';
 import MovieCardExtendedComponent from '@/components/common/movie-card-extended/movie-card-extended.vue';
-import * as Data from '@/assets/mockData.json';
 
 import { MoviesServices } from '@/services/movies.service';
+import { UserServices } from '@/services/user.service';
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from "swiper";
@@ -72,20 +72,27 @@ export default {
       modules: [Pagination, Navigation],
     };
   },
-  mounted() {
+  async mounted() {
     if(!localStorage.getItem('userInfo')) {
       this.$router.replace('/login');
     }
 
-    MoviesServices.getTrendingMovies().then( movies => {
-      this.moviesTrend = movies
-    });
+    let moviesTrend = await MoviesServices.getTrendingMovies();
+    let tvTrend = await MoviesServices.getTrendingTV();
 
-    MoviesServices.getTrendingTV().then( shows => {
-      this.tvTrend = shows
-    });
+    let favoriteMovies = await UserServices.getFavoriteMovies();
+    let favoriteTVshows = await UserServices.getFavoriteTV();
+    this.favorites = [...favoriteMovies, ...favoriteTVshows];
 
-    this.favorites = Data.results;
+    if( moviesTrend.length ) {
+      favoriteMovies = favoriteMovies.map(film => film.id);
+      this.moviesTrend = moviesTrend.map(film => ({...film, isFavorite: !!favoriteMovies.find(id => film.id === id)}) );
+    }
+
+    if( tvTrend.length ) {
+      favoriteTVshows = favoriteTVshows.map(film => film.id);
+      this.tvTrend = tvTrend.map(film => ({...film, isFavorite: !!favoriteTVshows.find(id => film.id === id)}) );
+    } 
   }
 }
 </script>

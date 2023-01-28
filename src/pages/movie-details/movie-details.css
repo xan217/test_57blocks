@@ -121,3 +121,16 @@
   border: 0px;
   cursor: pointer;
 }
+
+.movie-details_user-like_favorite {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.movie-details_user-like_favorite .selected {
+  color: orange;
+}

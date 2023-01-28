@@ -79,19 +79,30 @@ h4, h5 {
   color: black;
 }
 
-.rating {
-  display: grid;
-  grid-template-columns: 15px auto 15px;
-  margin: 5px;
+.movie-card_favorite {
+  position: absolute;
+  top: 11px;
+  right: 5px;
+  color: white;
+  cursor: pointer;
+  text-shadow: rgba(0, 0, 0, 0.8);
+}
+
+.selected {
+  color: orange;
+}
+
+.rating-std {
+  text-align: right;
   align-items: center;
 }
 
-.rating-down {
-  color: red;
+.rating-star {
+  color: gray;
 }
 
-.rating-up {
-  color: green;
+.rating-star {
+  color: gray;
 }
 
 .rating-size {

@@ -48,17 +48,55 @@ async function getTrendingTV ( ) {
  *    
  * @returns object
  */
-async function getMovieDetails ( id = null ) {
-  if( !id ) return {};
+async function getMovieDetails ( filmId ) {
+  if( !filmId ) return {};
   try {
-    let response = await Request('GET', `movie/${ id }`);  
+    let response = await Request('GET', `movie/${ filmId }`);  
     if( response.status === 200 ){  
       response = await response.json();
       return response;
     }
+    else {
+      let response = await Request('GET', `tv/${ filmId }`);  
+      if( response.status === 200 ){  
+        response = await response.json();
+        return response;
+      }
+    }
+    
     return {};
   } catch (err) {
-    console.error(`Error en al obtener los detalles de la Película ${ id }: ${ err.message }`);
+    console.error(`Error en al obtener los detalles de la Película ${ filmId }: ${ err.message }`);
+    return {};
+  }
+}
+
+/**
+ * getMovieDetails
+ * Get the movie details from a given ID
+ * 
+ * @param {number}: movie ID
+ *    
+ * @returns object
+ */
+async function getCredits ( filmId ) {
+  if( !filmId ) return {};
+  try {
+    let response = await Request('GET', `movie/${ filmId }/credits`);  
+    if( response.status === 200 ){  
+      response = await response.json();
+      return response;
+    }
+    else {
+      let response = await Request('GET', `tv/${ filmId }/credits`);  
+      if( response.status === 200 ){  
+        response = await response.json();
+        return response;
+      }
+    }
+    return {};
+  } catch (err) {
+    console.error(`Error en al obtener los detalles de la Película ${ filmId }: ${ err.message }`);
     return {};
   }
 }
@@ -67,5 +105,6 @@ async function getMovieDetails ( id = null ) {
 export const MoviesServices = {
   getTrendingMovies,
   getTrendingTV,
-  getMovieDetails
+  getMovieDetails,
+  getCredits
 }
