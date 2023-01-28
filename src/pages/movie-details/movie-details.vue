@@ -133,7 +133,6 @@ export default {
         !this.movie.isFavorite
       );
       if( success ) this.movie.isFavorite = !this.movie.isFavorite;
-      console.log(this.movie.isFavorite);
     }
   }
   

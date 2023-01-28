@@ -120,7 +120,6 @@ async function getAccount ( ) {
  * @returns bool
  */
 async function setFavorite ( mediaType, mediaID, favorite ) {
-  console.log(mediaType, mediaID, favorite);
   if( !mediaType || !mediaID ) return false;
   try {
     let response = await Request(

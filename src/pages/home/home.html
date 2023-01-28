@@ -36,6 +36,7 @@
           :navigation="true"
           :pagintation="{ clickable: true }"
           :modules="modules"
+          @realIndexChange="validateIndexPositionMovies"
         >
           <swiper-slide
             v-for="(movie, $index) in moviesTrend" 
@@ -58,6 +59,7 @@
           :navigation="true"
           :pagintation="{ clickable: true }"
           :modules="modules"
+          @realIndexChange="validateIndexPositionTVshows"
         >
           <swiper-slide
             v-for="(movie, $index) in tvTrend" 

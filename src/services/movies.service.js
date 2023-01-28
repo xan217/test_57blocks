@@ -6,9 +6,9 @@ import { Request } from './http.service';
  *    
  * @returns object
  */
-async function getTrendingMovies ( ) {
+async function getTrendingMovies ( page = 1 ) {
   try {
-    let response = await Request('GET', 'trending/movie/day');  
+    let response = await Request('GET', `trending/movie/day?page=${ page }`);  
     if( response.status === 200 ){  
       response = await response.json();
       return response.results;
@@ -26,9 +26,9 @@ async function getTrendingMovies ( ) {
  *    
  * @returns object
  */
-async function getTrendingTV ( ) {
+async function getTrendingTV ( page = 1 ) {
   try {
-    let response = await Request('GET', 'trending/tv/day');  
+    let response = await Request('GET', `trending/tv/day?page=${ page }`);  
     if( response.status === 200 ){  
       response = await response.json();
       return response.results;

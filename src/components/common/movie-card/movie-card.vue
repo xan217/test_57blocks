@@ -20,14 +20,12 @@ export default {
     movie: {}
   },
   mounted() {
-    console.log(this.movie);
     this.overview = this.movie.overview;
     this.poster = `url(https://image.tmdb.org/t/p/w185${this.movie.poster_path})`;
     this.rating = this.movie.vote_average.toFixed(1);
     this.title = this.movie.title || this.movie.name;
     this.year = (this.movie.release_date || this.movie.first_air_date).substr(0, 4);
     this.isFavorite = this.movie.isFavorite;
-    console.log(this.isFavorite);
   },
   methods: {
     openMovie() {
